@@ -1,0 +1,73 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.revature</groupId>
+  <artifactId>SpringDemo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+  	<maven.compiler.source>1.8</maven.compiler.source>
+  	<maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  
+  <!-- If i want to add Spring into my project, I can choose the dependencies that I want by 
+  selecting the specific modules and adding them as dependencies in my Maven project -->
+  <dependencies>
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+	<!-- Spring Core is the most basic building block of the Spring framework. Without this
+	module, dependency injection and other IOC features are not possible -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-core</artifactId>
+	    <version>5.3.22</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+	<!-- Spring Context is a module that gives you access to your IOC container (the official name
+	for the IOC container is the ApplicationContext) -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context</artifactId>
+	    <version>5.3.22</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+	<dependency>
+	    <groupId>org.postgresql</groupId>
+	    <artifactId>postgresql</artifactId>
+	    <version>42.5.0</version>
+	</dependency>
+
+	
+	<!--  an in-memory DB - nothing is truly persisted as when
+	the app stops running
+	H2 is NOT a spring module, but frequently used with Spring -->
+	<!--  
+	<dependency>
+	    <groupId>com.h2database</groupId>
+	    <artifactId>h2</artifactId>
+	    <version>2.1.214</version>
+	    <scope>test</scope>
+	</dependency>
+	-->	
+	
+	<!-- dependency for Spring ORM 
+	Do note that it's the same version as our other Spring 
+	dependencies! We don't want to mix up our version types-->
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-orm</artifactId>
+	    <version>5.3.22</version>
+	</dependency>
+	
+	<!-- Note that we are not directly using Hibernate ourselves, Spring ORM has abstraced this away from us
+	Hibernate will be our ORM of choice -->
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>5.6.10.Final</version>
+    </dependency>
+  </dependencies>
+  
+</project>
