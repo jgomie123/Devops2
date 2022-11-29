@@ -7,6 +7,8 @@
   <properties>
   	<maven.compiler.source>1.8</maven.compiler.source>
   	<maven.compiler.target>1.8</maven.compiler.target>
+  	<sonar.organization>jgomie123-demo</sonar.organization>
+ 	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
   
   <!-- If i want to add Spring into my project, I can choose the dependencies that I want by 
